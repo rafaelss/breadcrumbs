@@ -23,6 +23,7 @@ class Breadcrumbs
     options = {i18n: true}.merge(options)
     text = translate(text) if options.delete(:i18n)
     items << [text.to_s, url, options]
+    self
   end
 
   alias :<< :add

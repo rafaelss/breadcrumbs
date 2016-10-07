@@ -20,6 +20,9 @@ class BreadcrumbsTest < Minitest::Test
 
     @breadcrumbs << "Home"
     assert_equal 2, @breadcrumbs.items.count
+
+    @breadcrumbs.add("Home").add("Home")
+    assert_equal 4, @breadcrumbs.items.count
   end
 
   def test_tag
